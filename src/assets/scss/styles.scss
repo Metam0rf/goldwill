@@ -1,0 +1,217 @@
+@charset "UTF-8";
+@import "materialize";
+
+$secondary-theme-color-lighten: #dac16f;
+$secondary-theme-color: #caaa53;
+
+@font-face {
+    font-family: 'Familiar_probold';
+    src: url('../fonts/Familiar_Pro-Bold-webfont.eot');
+    src: url('../fonts/Familiar_Pro-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Familiar_Pro-Bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CertaSans_Medium';
+    src: url('../fonts/CertaSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('../fonts/MinionPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin main-font {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+}
+@mixin title-font {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+}
+@mixin sub-title-font {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+@mixin additional-font {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+@mixin secondary-font {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+}
+@mixin font {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 400;
+}
+@mixin secondary-title-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+@mixin secondary-content-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+body{
+    @include main-font;
+    min-width: 300px;
+}
+
+//.canvas-wrapper{
+//    position: relative;
+//    width: 100%;
+//    height: 100%;
+//}
+//
+//.canvas{
+//    position: absolute;
+//    z-index: 100;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    height: 100%;
+//    background-color: black;
+//}
+
+//----Wrappers START
+.wrapper{
+    padding: 20px 20px;
+    @media #{$medium-and-up} {
+        padding: 20px 65px;
+    }
+}
+
+.slide-wrapper{
+    z-index: 1;
+    position: relative;
+    height: 100%;
+}
+
+
+.slide{
+    box-sizing: padding-box;
+    height: 100vh;
+    padding: 20px 20px;
+    @media #{$medium-and-up} {
+        padding: 20px 65px;
+    }
+}
+
+.slide-slogan{
+    box-shadow: 0 0 10px black;
+    position: relative;
+    top: 0;
+    left: 0;
+    &__slogan{
+        font-family: "Minion Pro", serif;
+        width: 100%;
+        margin-top: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 44px;
+        line-height: 44px;
+        @media #{$medium-and-up} {
+            font-size: 50px;
+            line-height: 50px;
+            alignment-baseline: baseline;
+        }
+    }
+}
+
+.slide-navigation{
+    background-color: #000;
+}
+
+.arrow-down{
+    display: inline-block;
+    width: 28px;
+    height: 95px;
+    background: url(../img/down-arrow.png) top center no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.arrow-right{
+    display: inline-block;
+    width: 95px;
+    height: 28px;
+    background: url(../img/right-arrow.png) top center no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.nav-header{
+
+    padding-top: 37px;
+
+    & .slide__header{
+        width: 75px;
+        font-family: 'Minion Pro', sans-serif;
+        font-size: 37px;
+        line-height: 32px;
+        background: radial-gradient(1rem circle at center, #dac16f, #feefac, #caaa53);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #caaa53;
+    }
+}
+
+.skill-list{
+    color: #fff;
+    font-family: "Minion Pro", serif;
+    font-size: 30px;
+    margin: 200px 0 0 107px;
+
+    @media #{$medium-and-up} {
+        margin-left: 125px;
+    }
+
+    & li{
+        margin: 0 0 90px 0;
+        line-height: 40px;
+        cursor: pointer;
+
+        @media #{$medium-and-up} {
+            margin: 0 0 55px 0;
+        }
+        @media screen and (max-height: 800px) {
+            margin: 0 0 55px 0;
+        }
+
+        &>a{
+            color: #fff;
+            &:hover{
+                background: radial-gradient(1.2rem circle at center, #dac16f, #feefac 53%, #caaa53);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: #caaa53;
+            }
+        }
+    }
+}
+
+
+@import "footer";
+@import "header";

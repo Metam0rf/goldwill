@@ -1,0 +1,73 @@
+Arguments: 
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js install materialize
+
+PATH: 
+  /bin:/home/jenia/bin:/home/jenia/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.2.1
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+      "name": "goldwill",
+      "version": "1.0.0",
+      "description": "GoldWill site",
+      "main": "gulpfile.js",
+      "author": "Eugene Zozulya <zozulyaeugene@gmail.com>",
+      "license": "MIT",
+      "scripts": {
+          "start": "gulp",
+          "build": "gulp build --production"
+      },
+      "devDependencies": {
+          "babel-preset-es2015": "^6.3.13",
+          "babel-register": "^6.26.0",
+          "browser-sync": "^2.10.0",
+          "gulp": "github:gulpjs/gulp#4.0",
+          "gulp-autoprefixer": "^3.1.0",
+          "gulp-babel": "^6.1.2",
+          "gulp-clean-css": "^3.3.1",
+          "gulp-cli": "^1.2.1",
+          "gulp-concat": "^2.5.2",
+          "gulp-extname": "^0.2.0",
+          "gulp-if": "^2.0.0",
+          "gulp-imagemin": "^2.2.1",
+          "gulp-load-plugins": "^1.1.0",
+          "gulp-sass": "^2.1.0",
+          "gulp-sourcemaps": "^1.6.0",
+          "gulp-uglify": "^1.2.0",
+          "gulp-uncss": "^1.0.1",
+          "js-yaml": "^3.4.6",
+          "panini": "^1.3.0",
+          "rimraf": "^2.4.3",
+          "style-sherpa": "^1.0.0",
+          "yargs": "^3.8.0"
+      },
+      "babel": {
+          "presets": [
+              "es2015"
+          ]
+      },
+      "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: `install` has been replaced with `add` to add new dependencies. Run "yarn add materialize" instead.
+      at new MessageError (/usr/share/yarn/lib/cli.js:186:110)
+      at Object.<anonymous> (/usr/share/yarn/lib/cli.js:21987:13)
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:98:30)
+      at /usr/share/yarn/lib/cli.js:109:13
+      at <anonymous>

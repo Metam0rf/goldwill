@@ -1,0 +1,44 @@
+$header-height: 115px;
+.header{
+    padding: 20px 0 0 0;
+    height: $header-height;
+}
+
+.logo-container{
+    width: 200px;
+    &__logo{
+        width: 85px;
+    }
+    &__tittle{
+        //width: 100px;
+        margin: 30px 0 0 0;
+    }
+}
+
+.language-container{
+
+    &__pick-list{
+        font-family: Familiar_probold, sans-serif;
+        font-size: 24px;
+        //@media only screen and (max-width : 300px){
+        //    margin: auto;
+        //}
+
+        & li{
+            margin-right: 20px;
+            display: inline-block;
+
+            &:last-child{
+                margin:0;
+            }
+        }
+
+        & a{
+            color: #000;
+            &:hover{
+                color: $secondary-theme-color;
+            }
+        }
+    }
+}
+

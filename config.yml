@@ -1,0 +1,83 @@
+# Your project's server will run on localhost:xxxx at this port
+PORT: 8000
+
+# Autoprefixer will make sure your CSS works with these browsers
+COMPATIBILITY:
+  - "last 2 versions"
+  - "ie >= 9"
+  - "ios >= 7"
+
+# UnCSS will use these settings
+UNCSS_OPTIONS:
+  html:
+    - "src/**/*.html"
+  ignore:
+    - !!js/regexp .materialize
+    - !!js/regexp ^\.is-.*
+
+# Gulp will reference these paths when it copies files
+PATHS:
+  # Path to dist folder
+  dist: "dist"
+  # Paths to static assets that aren't images, CSS, or JavaScript
+  assets:
+    - "src/assets/**/*"
+    - "!src/assets/{img,scss,fonts}/**/*"
+    - "src/assets/js/vendor/*"
+    - "!src/assets/js/*.js"
+  # Paths to Sass libraries, which can then be loaded with @import
+  fonts:
+    - "src/assets/fonts/*"
+#    - "bower_components/font-awesome/fonts/*"
+  sass:
+#    - "bower_components/foundation-sites/scss"
+  # Paths to JavaScript libraries, which are combined into one file
+  javascript:
+    # Libraries required
+#    - "node_modules/jquery/dist/jquery.js"
+    #- "src/assets/js/vendor/modernizr-3.5.0.min.js"
+    # Core Foundation files
+#    - "bower_components/foundation-sites/js/foundation.core.js"
+#    - "bower_components/foundation-sites/js/foundation.util.*.js"
+    # Individual Materialize components
+    # If you aren't using a component, just remove it from the list
+    - "node_modules/materialize-css/js/cash.js"
+    - "node_modules/materialize-css/js/component.js"
+    - "node_modules/materialize-css/js/global.js"
+#    - "node_modules/animejs/anime.min.js"
+    - "node_modules/materialize-css/js/collapsible.js"
+    - "node_modules/materialize-css/js/dropdown.js"
+    - "node_modules/materialize-css/js/modal.js"
+    - "node_modules/materialize-css/js/materialbox.js"
+    - "node_modules/materialize-css/js/parallax.js"
+    - "node_modules/materialize-css/js/tabs.js"
+    - "node_modules/materialize-css/js/tooltip.js"
+    - "node_modules/materialize-css/js/waves.js"
+    - "node_modules/materialize-css/js/toasts.js"
+    - "node_modules/materialize-css/js/sidenav.js"
+    - "node_modules/materialize-css/js/scrollspy.js"
+    - "node_modules/materialize-css/js/autocomplete.js"
+    - "node_modules/materialize-css/js/forms.js"
+    - "node_modules/materialize-css/js/slider.js"
+    - "node_modules/materialize-css/js/cards.js"
+    - "node_modules/materialize-css/js/chips.js"
+    - "node_modules/materialize-css/js/pushpin.js"
+    - "node_modules/materialize-css/js/buttons.js"
+    - "node_modules/materialize-css/js/datepicker.js"
+    - "node_modules/materialize-css/js/timepicker.js"
+    - "node_modules/materialize-css/js/characterCounter.js"
+    - "node_modules/materialize-css/js/carousel.js"
+    - "node_modules/materialize-css/js/tapTarget.js"
+    - "node_modules/materialize-css/js/select.js"
+    - "node_modules/materialize-css/js/range.js"
+
+    # Paths to your own project code are here
+#    - "bower_components/jquery-mask-plugin/dist/jquery.mask.js"
+#    - "bower_components/slick-carousel/slick/slick.min.js"
+#    - "bower_components/isotope/dist/isotope.pkgd.js"
+#    - "bower_components/jquery-ui/jquery-ui.min.js"
+#    - "bower_components/jquery-validation/dist/jquery.validate.min.js"
+#    - "bower_components/jquery-validation/dist/additional-methods.min.js"
+#    - "bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"
+    - "src/assets/js/!(app).js"
+    - "src/assets/js/app.js"
